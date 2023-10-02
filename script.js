@@ -3,14 +3,15 @@ const yesButton = document.getElementById('yes-button');
 const questionText = document.getElementById('question');
 const answerText = document.getElementById('answer');
 const audio = document.getElementById('audio');
+const toggleButton = document.getElementById('toggle-button')
 
-    function toggleMute() {
-      audio.muted = !audio.muted;
-    }
+function toggleMute() {
+  audio.muted = !audio.muted;
+}
 
 let isMoved = false;
 
-let questionIndex = 0; // Start at 0 to display the first question
+let questionIndex = 0;
 const questions = [
   'Miss moko?',
   'Really?',
@@ -46,6 +47,7 @@ function displayAnswers() {
   answerText.textContent = 'I miss you and I love you too!! ❤️❤️❤️';
   yesButton.style.display = 'none';
   noButton.style.display = 'none';
+  toggleButton.style.display = 'none';
 }
 
 function showAnswer() {
@@ -69,4 +71,3 @@ yesButton.addEventListener('click', () => {
     changeQuestion('Yes');
   }
 });
-

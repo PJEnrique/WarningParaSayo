@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('tin.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 50px;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #ffc0cb, 0 0 20px #ffe4e1, 0 0 30px #ffb6c1;
+  }
+  to {
+    box-shadow: 0 0 20px #ffc0cb, 0 0 40px #ffe4e1, 0 0 60px #ffb6c1;
+  }
+}
+.question-container {
+  text-align: center;
+}
+
+.question-text {
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.answer {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.3s ease-out;
+  animation: glow 1s infinite alternate;
+}
+
+#yes-button {
+  background-color: #e63e62;
+  color: white;
+}
+
+#no-button {
+  background-color: #ff1493;
+  color: white;
+}
+
+#no-button.move-right {
+  transform: translateX(-200px);
+}
